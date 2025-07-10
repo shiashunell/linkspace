@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+/* 🎨 BASIC RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌌 PAGE BACKGROUND */
+html, body {
+  height: 100%;
+  font-family: 'Cinzel Decorative', serif;
+  color: #fff;
+  background: url('https://i.postimg.cc/nr479FR0/IMG-0768.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: visible;
+}
+
+/* 🖼️ CONTENT CONTAINER */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* dark transparent overlay */
+}
+
+/* 🔲 INNER CONTENT BOX */
+.content {
+  max-width: 360px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: frosted glass(8px); /* GLASS EFFECT */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* 🖼️ PROFILE PIC */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-bottom: 1rem;
+}
+
+/* ✨ GLOWING TITLE */
+.glow {
+  font-size: 2.0rem;
+  color: #fff;
+  text-shadow: 
+    0 0 10px #fff, 
+    0 0 20px #f0f, 
+    0 0 30px #f0f;
+  margin-bottom: 0.4rem;
+}
+
+/* 💬 TAGLINE */
+.tagline {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+/* 🎧 MUSIC PLAYER BOX */
+.audio-box {
+  margin: 1rem 0 1.2rem;
+}
+
+audio {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 🖱️ BUTTON BASE STYLE */
+.link-btn {
+  display: block;
+  margin: 12px auto;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 240px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+/* 🔮 BUTTON STYLE VARIANTS */
+.link-btn.neon {
+  background: #c084fc33;
+  border: 1px solid #fff;
+  box-shadow: 0 0 8px #e0b0ff;
+}
+
+.link-btn.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+}
+
+.link-btn.darkpill {
+  background: linear-gradient(90deg, #2c2c2c, #1a1a1a);
+  border: none;
+  font-style: italic;
+}
+
+.link-btn.outlined {
+  background: transparent;
+  border: 1px solid #fff;
+  font-weight: lighter;
+}
+
+/* ✨ BUTTON HOVER EFFECT */
+.link-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
