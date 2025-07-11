@@ -55,15 +55,15 @@
   const speed = 120; // speed in ms
   const typedText = document.getElementById("typed-text");
 
-  function type() {
+  function typeloop() {
     if (index < text.length) {
       typedText.textContent += text.charAt(index);
       index++;
-      setTimeout(type, speed);
+      setTimeout(loop, isDeleting ? 80: speed);
     }
   }
 
-  window.onload = type;
+  window.onload = typeloop;
 </script>
 
 
