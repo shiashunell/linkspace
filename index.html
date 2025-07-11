@@ -74,11 +74,11 @@
 </section>
 
 	<script>
-  const phrases = ["My LinkSpace", "music midnight chaos", "🎧 HeadstrmShiaa 🎵"];
+  const phrases = ["My LinkSpace 🌙 ", "music Soulful ", "midnight R&B ", "Pop hipHop ", "Youtube ", "🎧 HeadstrmShiaa 🎵"];
   let currentPhrase = 0;
   let currentLetter = 0;
   let isDeleting = false;
-  const speed = 100;
+  const speed = 80;
   const typedText = document.getElementById("typed-text");
 
   function typeLoop() {
@@ -91,7 +91,7 @@
 
     if (!isDeleting && currentLetter === current.length) {
       isDeleting = true;
-      setTimeout(typeLoop, 1000); // pause before deleting
+      setTimeout(typeLoop, 1500); // pause before deleting
       return;
     }
 
