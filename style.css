@@ -177,22 +177,23 @@ audio {
 
 .typing-title {
   font-family: 'Cinzel Decorative', serif;
-  font-size: 2.5rem;
-  color: #ffffff;
+  font-size: 2.2rem;
+  color: #fff;
   text-align: center;
   margin-bottom: 20px;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #c084fc;
+  text-shadow: 0 0 5px #fff, 0 0 10px #c084fc;
 }
 
 .cursor {
   display: inline-block;
-  color: #ffffff;
-  margin-left: 2px;
   animation: blink 0.8s infinite;
+  color: #fff;
+  margin-left: 4px;
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
