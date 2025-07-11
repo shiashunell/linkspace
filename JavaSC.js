@@ -16,32 +16,33 @@
   });
 
 <script>
-  const text = "music • midnight • chaos" "My link space"; // <- change this line
-  let index = 0;
+  const phrases = ["My LinkSpace", "music • midnight • chaos", "🎧 HeadstrmShiaa 🎵"];
+  let currentPhrase = 0;
+  let currentLetter = 0;
   let isDeleting = false;
-  const speed = 120;
+  const speed = 100;
   const typedText = document.getElementById("typed-text");
 
   function typeLoop() {
-    if (!isDeleting && index <= text.length) {
-      typedText.textContent = text.substring(0, index);
-      index++;
-    } else if (isDeleting && index >= 0) {
-      typedText.textContent = text.substring(0, index);
-      index--;
+    const current = phrases[currentPhrase];
+    if (isDeleting) {
+      typedText.textContent = current.substring(0, currentLetter--);
+    } else {
+      typedText.textContent = current.substring(0, currentLetter++);
     }
 
-    if (index > text.length) {
+    if (!isDeleting && currentLetter === current.length) {
       isDeleting = true;
       setTimeout(typeLoop, 1000); // pause before deleting
       return;
     }
 
-    if (isDeleting && index === 0) {
+    if (isDeleting && currentLetter === 0) {
       isDeleting = false;
+      currentPhrase = (currentPhrase + 1) % phrases.length;
     }
 
-    setTimeout(typeLoop, isDeleting ? 80 : speed);
+    setTimeout(typeLoop, isDeleting ? 60 : speed);
   }
 
   window.onload = typeLoop;
