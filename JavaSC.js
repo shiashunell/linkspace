@@ -14,4 +14,19 @@
       profilePic.style.display = 'block';
     }
   });
-</script>
+
+<script>
+  const text = "My Link Space";
+  let index = 0;
+  const speed = 120; // speed in ms
+  const typedText = document.getElementById("typed-text");
+
+  function type() {
+    if (index < text.length) {
+      typedText.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, speed);
+    }
+  }
+
+  window.onload = type;
