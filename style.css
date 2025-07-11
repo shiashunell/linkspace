@@ -9,12 +9,12 @@
 
 /* 🌌 PAGE BACKGROUND */
 html, body {
-  height: 100%;
+  height: auto;
   font-family: 'Cinzel Decorative', serif;
   color: #fff;
   background: url('https://i.postimg.cc/nr479FR0/IMG-0768.jpg') no-repeat center center fixed;
   background-size: cover;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 /* 🖼️ CONTENT CONTAINER */
@@ -22,8 +22,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 20px;
+  min-height: 100vh;
+  padding: 40xp 20px;
   text-align: center;
   background: rgba(0, 0, 0, 0.4); /* dark transparent overlay */
 }
@@ -177,7 +177,7 @@ audio {
 
 .typing-title {
   font-family: 'Cinzel Decorative', serif;
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   color: #fff;
   text-align: center;
   margin-bottom: 20px;
