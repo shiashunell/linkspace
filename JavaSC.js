@@ -16,17 +16,33 @@
   });
 
 <script>
-  const text = "My Link Space";
+  const text = "music • midnight • chaos" "My link space"; // <- change this line
   let index = 0;
-  const speed = 120; // speed in ms
+  let isDeleting = false;
+  const speed = 120;
   const typedText = document.getElementById("typed-text");
 
-  function type() {
-    if (index < text.length) {
-      typedText.textContent += text.charAt(index);
+  function typeLoop() {
+    if (!isDeleting && index <= text.length) {
+      typedText.textContent = text.substring(0, index);
       index++;
-      setTimeout(type, speed);
+    } else if (isDeleting && index >= 0) {
+      typedText.textContent = text.substring(0, index);
+      index--;
     }
+
+    if (index > text.length) {
+      isDeleting = true;
+      setTimeout(typeLoop, 1000); // pause before deleting
+      return;
+    }
+
+    if (isDeleting && index === 0) {
+      isDeleting = false;
+    }
+
+    setTimeout(typeLoop, isDeleting ? 80 : speed);
   }
 
-  window.onload = type;
+  window.onload = typeLoop;
+</script>
