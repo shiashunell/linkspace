@@ -129,7 +129,7 @@ audio {
 .link-btn i {
   margin-right: 10px;
 }
-.link-btn.solid-glow {
+.link-btn solid-glow {
   background-color: #9146FF;
   color: white;
   padding: 14px 28px;
