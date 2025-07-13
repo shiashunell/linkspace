@@ -129,6 +129,35 @@ audio {
 .link-btn i {
   margin-right: 10px;
 }
+.link-btn.solid-glow {
+  background-color: #9146FF;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #9146FF88, 0 0 20px #9146FF88;
+  transition: 0.3s ease;
+}
+
+.link-btn.solid-glow:hover {
+  box-shadow: 0 0 20px #9146FF, 0 0 40px #9146FF;
+  transform: scale(1.05);
+}
+
+.link-btn.solid-glow .icon {
+  width: 24px;
+  height: 24px;
+}
+
+
 
 /* 🎧 Audio Box Styling */
 .audio-box {
