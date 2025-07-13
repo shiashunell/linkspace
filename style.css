@@ -128,7 +128,7 @@ audio {
 /* Discord botton affect */
 
 /* TWITCH ICON 🟣🎧*/
-.link-btn solid-glow {
+.link-btn.solid-glow {
   background-color: #9146FF;
   color: black;
   padding: 14px 28px;
